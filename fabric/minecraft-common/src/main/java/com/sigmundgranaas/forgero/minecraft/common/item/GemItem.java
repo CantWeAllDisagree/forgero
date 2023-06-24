@@ -3,11 +3,10 @@ package com.sigmundgranaas.forgero.minecraft.common.item;
 import java.util.List;
 
 import com.sigmundgranaas.forgero.core.customdata.DataContainer;
-import com.sigmundgranaas.forgero.core.property.PropertyContainer;
 import com.sigmundgranaas.forgero.core.state.LeveledState;
 import com.sigmundgranaas.forgero.core.state.State;
 import com.sigmundgranaas.forgero.core.type.Type;
-import com.sigmundgranaas.forgero.core.util.match.Context;
+import com.sigmundgranaas.forgero.core.util.match.MatchContext;
 import com.sigmundgranaas.forgero.core.util.match.Matchable;
 import com.sigmundgranaas.forgero.minecraft.common.service.StateService;
 import com.sigmundgranaas.forgero.minecraft.common.tooltip.Writer;
@@ -19,7 +18,7 @@ import net.minecraft.item.ItemStack;
 import net.minecraft.text.Text;
 import net.minecraft.world.World;
 
-public class GemItem extends Item implements StateItem, State {
+public class GemItem extends Item implements StateItem {
 	private final State DEFAULT;
 	private final StateService service;
 
@@ -73,24 +72,10 @@ public class GemItem extends Item implements StateItem, State {
 	}
 
 	@Override
-	public boolean test(Matchable match, Context context) {
+	public boolean test(Matchable match, MatchContext context) {
 		return DEFAULT.test(match, context);
 	}
 
-	@Override
-	public PropertyContainer dynamicProperties(ItemStack stack) {
-		return dynamicState(stack);
-	}
-
-	@Override
-	public PropertyContainer defaultProperties() {
-		return DEFAULT;
-	}
-
-	@Override
-	public boolean isEquippable() {
-		return false;
-	}
 
 	@Override
 	public DataContainer customData() {

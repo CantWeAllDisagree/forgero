@@ -49,15 +49,40 @@
           "OFFENSIVE"
         ],
         "description": "trinket",
-        "type": "TRINKET",
-        "tier": 1
+        "type": "TRINKET"
       }
-    ],
-    "models": [
-      {}
     ]
   },
   "properties": {
+    "grouped_attributes": [
+      {
+        "context": "COMPOSITE",
+        "operation": "MULTIPLICATION",
+        "order": "BASE",
+        "attributes": [
+          {
+            "id": "refined-schematic-rarity-composite",
+            "type": "RARITY",
+            "value": 1.3
+          },
+          {
+            "id": "refined-schematic-attack_damage-composite",
+            "type": "ATTACK_DAMAGE",
+            "value": 1.3
+          },
+          {
+            "id": "refined-schematic-mining_speed-composite",
+            "type": "MINING_SPEED",
+            "value": 1.3
+          },
+          {
+            "id": "refined-schematic-durability-composite",
+            "type": "DURABILITY",
+            "value": 1.3
+          }
+        ]
+      }
+    ],
     "attributes": [
       {
         "id": "schematic-rarity-local",
@@ -68,35 +93,11 @@
         "value": 50
       },
       {
-        "id": "schematic-rarity-composite",
-        "type": "RARITY",
-        "order": "COMPOSITE",
-        "operation": "MULTIPLICATION",
-        "value": 1.3
-      },
-      {
-        "type": "DURABILITY",
-        "order": "COMPOSITE",
-        "operation": "MULTIPLICATION",
-        "value": 1.3
-      },
-      {
-        "type": "ATTACK_DAMAGE",
-        "order": "COMPOSITE",
-        "operation": "MULTIPLICATION",
-        "value": 1.3
-      },
-      {
+        "id": "refined_sword_blade_schematic-attack_speed-composite",
         "type": "ATTACK_SPEED",
-        "order": "COMPOSITE",
+        "context": "COMPOSITE",
         "operation": "ADDITION",
-        "value": 1.3
-      },
-      {
-        "type": "WEIGHT",
-        "order": "COMPOSITE",
-        "operation": "MULTIPLICATION",
-        "value": 1
+        "value": 0.1
       }
     ]
   },
